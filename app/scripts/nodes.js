@@ -85,6 +85,18 @@ nodes.nodeList = {
         'service': 'MyEtherWallet',
         'lib': new nodes.customNode('https://api.myetherapi.com/rop', '')
     },
+    'rop_infura': {
+        'name': 'Ropsten',
+        'type': nodes.nodeTypes.Ropsten,
+        'blockExplorerTX': 'https://ropsten.etherscan.io/tx/[[txHash]]',
+        'blockExplorerAddr': 'https://ropsten.etherscan.io/address/[[address]]',
+        'eip155': true,
+        'chainId': 3,
+        'tokenList': require('./tokens/ropstenTokens.json'),
+        'abiList': require('./abiDefinitions/ropstenAbi.json'),
+        'service': 'infura.io',
+        'lib': new nodes.infuraNode('https://ropsten.infura.io/mew')
+    },
     'kov_ethscan': {
         'name': 'Kovan',
         'type': nodes.nodeTypes.Kovan,
@@ -97,6 +109,18 @@ nodes.nodeList = {
         'service': 'Etherscan.io',
         'lib': require('./nodeHelpers/etherscanKov')
     },
+    'kov_infura': {
+        'name': 'Kovan',
+        'type': nodes.nodeTypes.Kovan,
+        'blockExplorerTX': 'https://kovan.etherscan.io/tx/[[txHash]]',
+        'blockExplorerAddr': 'https://kovan.etherscan.io/address/[[address]]',
+        'eip155': true,
+        'chainId': 42,
+        'tokenList': require('./tokens/kovanTokens.json'),
+        'abiList': require('./abiDefinitions/kovanAbi.json'),
+        'service': 'infura.io',
+        'lib': new nodes.infuraNode('https://kovan.infura.io/mew')
+    },
     'rin_ethscan': {
         'name': 'Rinkeby',
         'type': nodes.nodeTypes.Rinkeby,
@@ -108,6 +132,18 @@ nodes.nodeList = {
         'abiList': require('./abiDefinitions/rinkebyAbi.json'),
         'service': 'Etherscan.io',
         'lib': require('./nodeHelpers/etherscanRin')
+    },
+    'rin_infura': {
+        'name': 'Rinkeby',
+        'type': nodes.nodeTypes.Rinkeby,
+        'blockExplorerTX': 'https://rinkeby.etherscan.io/tx/[[txHash]]',
+        'blockExplorerAddr': 'https://rinkeby.etherscan.io/address/[[address]]',
+        'eip155': true,
+        'chainId': 4,
+        'tokenList': require('./tokens/rinkebyTokens.json'),
+        'abiList': require('./abiDefinitions/rinkebyAbi.json'),
+        'service': 'infura.io',
+        'lib': new nodes.infuraNode('https://rinkeby.infura.io/mew')
     },
     'rsk': {
         'name': 'RSK',
